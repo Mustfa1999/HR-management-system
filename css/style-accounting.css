@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+nav{
+    background-color: rgb(0, 2, 141);
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topic {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.page{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mainPage {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main{
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    background-image: url("https://assets.kpmg/is/image/kpmg/network-white-dots-connected-lines-dark-blue-background:cq5dam.web.1400.500");
+    background-size: cover;
+}
+
+
+footer{
+    padding: 20;
+    background-color: rgb(25, 255, 255);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    font-size: 20px;
+}
+
+.footerP{
+    color: rgb(0, 0, 0);
+}
+
