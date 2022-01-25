@@ -16,12 +16,72 @@
                 <p class="topic"> HR Employees-Website</p>
                 <p class="page"> Home page </p>
             </section>
-            <a href="accounting.html" class="accounting"> Accounting page </a>
+            <a href="accounting.html" class="accounting"> Go to Accounting page </a>
         </nav>
     </header>
     
     <main>
-        <script src="./js/app.js"></script>
+        <section id="upper">
+            <div class="side-container">
+                <p class="subtitle"> New Employee </p>
+                <form id="myForm">
+                    <fieldset>
+                        <legend class="legend">Add new employee</legend>
+                        <div class="fieldContainer">
+                            <label class="fieldLabel">Full Name: </label>
+                            <input type="text" class="field" id="Full-Name">
+                        </div>
+                        <div class="fieldContainer">
+                            <label class="fieldLabel">Department: </label>
+                            <select name="Department " class="field" id="Department">
+                                <option value="Administration">Administration</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Development">Development</option>
+                                <option value="Finance">Finance</option>
+                            </select>
+                        </div>
+                        <div class="fieldContainer">
+                            <label class="fieldLabel">Level: </label>
+                            <select name="Level" class="field" id="Level">
+                                <option value="Junior">Junior</option>
+                                <option value="Mid-Senior">Mid-Senior</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+                        </div>
+                        <div class="fieldContainer">
+                            <label class="fieldLabel">Image url: </label>
+                            <input type="text" class="field" id="Image-url">
+                        </div>
+                        <div class="buttonDiv">
+                            <button class="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <section class="side-container">
+                <p class="subtitle"> All Employees </p>
+                <div id="cards"></div>
+            </section>
+        </section>
+
+        <p class="subtitle"> Employees sorted by Departments </p>
+
+        <section id="lower">
+            <section class="depart" id="Administration-Section">
+                <p class="subtitle"> Administration </p>
+            </section>
+            <section class="depart" id="Marketing-Section">
+                <p class="subtitle"> Marketing </p>
+            </section>
+            <section class="depart" id="Development-Section">
+                <p class="subtitle"> Development </p>
+            </section>
+            <section class="depart" id="Finance-Section">
+                <p class="subtitle"> Finance </p>
+            </section>
+        </section>
+        
+        
     </main>
     
     <footer>
@@ -30,6 +90,8 @@
         <p><a href="" class="footerP">Twitter</a></p>
         <p><a href="" class="footerP">Instagram</a></p>
     </footer>
+
+    <script src="./js/app.js"></script>
 
 </body>
 </html>
