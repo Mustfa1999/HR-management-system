@@ -3,9 +3,22 @@
     margin: 0px;
 }
 
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 20%;
+}
+
 nav{
-    background-color: rgb(0, 2, 141);
-    height: 100px;
+    background-color: #222831;
+    height: 70px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -15,69 +28,190 @@ nav{
 .topic {
     font-size: 50px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: #EEEEEE;
 }
 
 .page{
-    color: rgb(255, 255, 255);
+    color: #EEEEEE;
     font-size: 25px;
     font-weight: bold;
 }
 
 .accounting {
-    color: rgb(255, 255, 255);
+    color: #EEEEEE;
     font-size: 20px;
     font-weight: bold;
 }
 
 main{
-    background-color: rgb(255, 255, 255);
-    padding: 50px;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 20px;
+    background-color: #00ADB5;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 350px;
-    background-image: url("https://assets.kpmg/is/image/kpmg/network-white-dots-connected-lines-dark-blue-background:cq5dam.web.1400.500");
+    background-image: url("https://i.pinimg.com/originals/3c/29/ff/3c29ffc6379493eb3ec6901ff4fc85af.jpg");
     background-size: cover;
 }
 
-table{
-    background-color: rgb(205, 255, 230);
-    margin: 10px;
-    padding: 5px;
-    border-color: rgb(161, 161, 161);
-    border: solid 1px;
+#upper{
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
-th{
-    background-color: rgb(244, 255, 89);
-    font-size: 20px;
-    border: solid 2px;
-    margin: 10px;
-    padding: 5px;
-    border-color: rgb(66, 66, 66);
-}
-
-td{
-    margin: 10px;
+.side-container{
+    margin-top: 20px;
     padding: 7px;
-    font-weight: bold ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.subtitle{
+    padding: 15px;
+    margin: 10px;
+    background-color: #00ADB5;
+    color: #222831;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+#myForm{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 2px #EEEEEE;
+    background-color: #00ADB5;
+}
+
+.fieldContainer{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.field{
+    margin: 3px;
+    background-color: #EEEEEE;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fieldLabel{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px;
+}
+
+.legend{
+    font-size: 20px;
+    color: #222831;
+    font-weight: bold;
+}
+
+.buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.submit{
+    padding: 10px;
+    margin: 4px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+#cards{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 450px;
+    width: 350px;
+    background-color: #00ADB5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 45px;
+    border: solid 1px #222831;
+}
+
+#lower{
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.depart{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 450px;
+    width: 20%;
+    background-color: #00ADB5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 45px;
+    border: solid 1px #222831;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #00ADB5;
+  }
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    color: transparent;
+    border-radius: 10px;
+  }
+   
+::-webkit-scrollbar-thumb {
+    background: #222831; 
+    border-radius: 10px;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #4d5a6e; 
+  }
 
 
 footer{
+    width: 100%;
+    height: 20%;
     padding: 20;
-    background-color: rgb(25, 255, 255);
+    background-color: #393E46;
     flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 50px;
     font-size: 20px;
 }
 
 .footerP{
-    color: rgb(0, 0, 0);
+    color: #EEEEEE;
 }
 
