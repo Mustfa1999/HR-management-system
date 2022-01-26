@@ -99,21 +99,26 @@ Employee.prototype.render = function() {
     depSec.appendChild(newCard2);
 }
 
-const employee0 = new Employee(Info.FullName[0], Info.Department[0], Info.Level[0], Info.ImgURL[0]); 
-const employee1 = new Employee(Info.FullName[1], Info.Department[1], Info.Level[1], Info.ImgURL[1]);
-const employee2 = new Employee(Info.FullName[2], Info.Department[2], Info.Level[2], Info.ImgURL[2]);
-const employee3 = new Employee(Info.FullName[3], Info.Department[3], Info.Level[3], Info.ImgURL[3]);
-const employee4 = new Employee(Info.FullName[4], Info.Department[4], Info.Level[4], Info.ImgURL[4]);
-const employee5 = new Employee(Info.FullName[5], Info.Department[5], Info.Level[5], Info.ImgURL[5]);
-const employee6 = new Employee(Info.FullName[6], Info.Department[6], Info.Level[6], Info.ImgURL[6]);
+function deleteAll() {
+    window.localStorage.clear();
+    window.location.reload();
+}
 
-employee0.render();
-employee1.render();
-employee2.render();
-employee3.render();
-employee4.render();
-employee5.render();
-employee6.render();
+function creator(FN, Dep, Lev, Img) {
+    let newEmployee = new Employee(FN, Dep, Lev, Img);
+    newEmployee.render();
+
+    let storedEmployee = {
+        employeeIdNew: newEmployee.employeeId, 
+        fullNameNew: newEmployee.fullName,
+        departmentNew: newEmployee.department,
+        levelNew: newEmployee.level,
+        imgURLNew: newEmployee.imgURL,
+        salaryNew: newEmployee.salary,
+    };
+    window.localStorage.setItem(`${newEmployee.employeeId}`, JSON.stringify(storedEmployee));
+}
+
 
 let button = document.getElementById("myForm");
 button.addEventListener("submit", buttonHandler);
@@ -122,8 +127,17 @@ function buttonHandler() {
     let newEmployeeDepartment = document.getElementById("Department").value;
     let newEmployeeLevel = document.getElementById("Level").value;
     let newEmployeeImg = document.getElementById("Image-url").value;
-    const newEmployee = new Employee(newEmployeeName, newEmployeeDepartment, newEmployeeLevel, newEmployeeImg);
-    newEmployee.render();
+    creator(newEmployeeName, newEmployeeDepartment, newEmployeeLevel, newEmployeeImg);
     event.preventDefault();
  }; 
+
+
+for (let index = 0; index < 7; index++) {
+    creator(Info.FullName[index], Info.Department[index], Info.Level[index], Info.ImgURL[index]);
+}
+
+for (let index = 7; index < window.localStorage.length; index++) {
+    let current = JSON.parse(window.localStorage.getItem(`${1000+index}`)); 
+    creator(current.fullNameNew, current.departmentNew, current.levelNew, current.imgURLNew);
+}
 

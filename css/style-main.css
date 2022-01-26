@@ -14,6 +14,10 @@ body{
 header{
     width: 100%;
     height: 20%;
+    border-bottom: #EEEEEE solid 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav{
@@ -37,7 +41,7 @@ nav{
     font-weight: bold;
 }
 
-.accounting {
+.goTo {
     color: #EEEEEE;
     font-size: 20px;
     font-weight: bold;
@@ -136,6 +140,15 @@ main{
     margin: 4px;
     font-size: 30px;
     color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+#del{
+    padding: 10px;
+    margin: 15px;
+    font-size: 30px;
+    color: rgb(255, 0, 0);
     font-weight: bold;
     background-color: black;
 }
